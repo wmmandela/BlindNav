@@ -1,0 +1,7 @@
+torch
+ultralytics
+coremltools
+openai-whisper
+fastapi
+uvicorn
+python-multipart

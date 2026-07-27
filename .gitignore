@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv
+venv
+**/venv
+**/env
+
+
+ml/runs/
+ml/exports/
+ml/datasets/
+*.pt
+*.onnx
+*.mlpackage/
+*.mlmodel
+
+# React Native
+mobile/BlindNav/node_modules/
+mobile/BlindNav/ios/Pods/
+mobile/BlindNav/ios/build/
+mobile/BlindNav/android/.gradle/
+mobile/BlindNav/android/app/build/
+mobile/BlindNav/android/build/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# Build artifacts & local configs
+.cxx/
+*.cxx
+local.properties
+.xcode.env.local
+

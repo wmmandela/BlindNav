@@ -1,0 +1,7 @@
+{
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "index.js"]
+}
