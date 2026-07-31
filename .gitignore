@@ -33,4 +33,8 @@ mobile/BlindNav/android/build/
 *.cxx
 local.properties
 .xcode.env.local
+xcuserdata/
+**/xcuserdata/
+web/node_modules/
+ml/Ultralytics/
 
