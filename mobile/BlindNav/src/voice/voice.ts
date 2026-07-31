@@ -16,7 +16,11 @@ export class VoiceController {
     this.callbacks = callbacks;
     Voice.onSpeechResults = this.handleResults;
     Voice.onSpeechError = this.handleError;
-    Tts.setDefaultRate(0.48);
+    try {
+      (Tts as any).setDefaultRate(0.48, true);
+    } catch (e) {
+      console.warn('[VoiceController] TTS rate setup skipped:', e);
+    }
   }
 
   startListening(locale = 'en-US') {
@@ -32,7 +36,9 @@ export class VoiceController {
   }
 
   speak(text: string) {
-    Tts.stop();
+    try {
+      (Tts as any).stop(false);
+    } catch (e) {}
     Tts.speak(text);
   }
 
@@ -50,6 +56,8 @@ export class VoiceController {
 }
 
 export function speak(text: string) {
-  Tts.stop();
+  try {
+    (Tts as any).stop(false);
+  } catch (e) {}
   Tts.speak(text);
 }
